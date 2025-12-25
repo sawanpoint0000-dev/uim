@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Secure India Generator</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+    <h2>Secure India Generator</h2>
+
+    <div class="top-bar">
+        <span id="counter">Generated: 0</span>
+        <button class="mute" onclick="toggleSound()">🔊</button>
+    </div>
+
+    <div class="field">
+        <label>Password</label>
+        <div class="input-wrap">
+            <input id="password" value="Purushotam@8434" readonly>
+            <span class="copy" onclick="copyText('password',this)">📋</span>
+        </div>
+    </div>
+
+    <div class="field">
+        <label>Govt Used ID No.</label>
+        <div class="input-wrap">
+            <input id="govtId" readonly>
+            <span class="copy" onclick="copyText('govtId',this)">📋</span>
+        </div>
+    </div>
+
+    <div class="field">
+        <label>Full Address</label>
+        <div class="input-wrap">
+            <textarea id="address" readonly></textarea>
+            <span class="copy" onclick="copyText('address',this)">📋</span>
+        </div>
+    </div>
+
+    <div class="field">
+        <label>ZIP / PIN Code</label>
+        <div class="input-wrap">
+            <input id="zip" readonly>
+            <span class="copy" onclick="copyText('zip',this)">📋</span>
+        </div>
+    </div>
+
+    <button class="generate" onclick="generateData()">Generate New</button>
+</div>
+
+<audio id="copySound" src="click.mp3"></audio>
+<script src="script.js"></script>
+</body>
+</html>
